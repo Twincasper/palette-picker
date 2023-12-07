@@ -1,10 +1,6 @@
-import '/src/style.css';
+import './style.css';
 import { v4 as uuidv4 } from 'uuid';
-import { createPalette } from './local-storage-utils';
-
-console.log("hello world");
-document.querySelector("#app").innerHTML += '<h1>Hello world</h1>';
-
+import { createPalette } from './modules/local-storage-utils.js';
 
 const handleSubmit = (event) => {
   event.preventDefault();

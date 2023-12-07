@@ -5,16 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
     <div id="app">
       <main>
         <h1 id="site-heading">Palette Picker</h1>
-        <section id="user-palettes" aria-label="user-palettes">
-          <h2>Palettes</h2>
-          <ul id="palettes-list"></ul>
-        </section>
         <form action="#" aria-labelledby="form-heading" id="palette-form">
           <h2 aria-labelledby="form-heading" id="form-heading">Add a Palette</h2>
           <div class="palette-title-container">
@@ -50,8 +46,13 @@
 
         <input type="submit" value="Create the palette">
         </form>
+
+        <section id="user-palettes" aria-label="user-palettes">
+          <h2>Palettes</h2>
+          <ul id="palettes-list"></ul>
+        </section>
       </main>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import palettes from './palettes.json';
+import palettes from '../../palettes.json';
 
 export const createPalette = (palette) => {
   const li = document.createElement('li');
