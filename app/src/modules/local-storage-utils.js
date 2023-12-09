@@ -1,4 +1,4 @@
-import palettes from '../../palettes.json';
+import startingPalettes from '../../palettes.json';
 
 const setLocalStorageKey = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
@@ -15,11 +15,11 @@ const getLocalStorageKey = (key) => {
 };
 
 export const getPalettes = () => {
-  getLocalStorageKey('palettes') || [];
+  return getLocalStorageKey('palettes') || [];
 };
 
 export const setPalettes = (palettes) => {
-  setLocalStorageKey('palettes', palettes);
+  return setLocalStorageKey('palettes', palettes);
 };
 
 export const addPalette = (palette) => {
@@ -29,8 +29,10 @@ export const addPalette = (palette) => {
 };
 
 export const initPalettesIfEmpty = () => {
-  
-}
+  if (getPalettes().length === 0) {
+    setLocalStorageKey('palettes',startingPalettes);
+  }
+};
 
 export const createPalette = (palette) => {
   const paletteCard = document.createElement('div');
