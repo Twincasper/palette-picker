@@ -1,7 +1,59 @@
 import palettes from '../../palettes.json';
 
-export const createPalette = (palette) => {
-  const li = document.createElement('li');
+const setLocalStorageKey = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
 
-  li.innerHTML = ``// make this innerHTML so that its the template of our palettes
+const getLocalStorageKey = (key) => {
+  try {
+    const value = localStorage.getItem(key);
+    return JSON.parse(value);
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+};
+
+export const getPalettes = () => {
+  getLocalStorageKey('palettes') || [];
+};
+
+export const setPalettes = (palettes) => {
+  setLocalStorageKey('palettes', palettes);
+};
+
+export const addPalette = (palette) => {
+  const palettes = getPalettes();
+  palettes.push(palette);
+  setPalettes(palettes);
+};
+
+export const initPalettesIfEmpty = () => {
+  
+}
+
+export const createPalette = (palette) => {
+  const paletteCard = document.createElement('div');
+  paletteCard.classList.add('palette-card');
+
+  const title = document.createElement('h3');
+  title.innerHTML = palette.title;
+  paletteCard.appendChild(title);
+
+  const colorsContainer = document.createElement('div');
+  colorsContainer.classList.add('colors-container');
+
+  palette.colors.forEach(color => {
+    const colorDiv = document.createElement('div');
+    colorDiv.classList.add('color');
+    colorsContainer.appendChild(colorDiv);
+  });
+
+  paletteCard.appendChild(colorsContainer);
+
+  const tempLabel = document.createElement('p');
+  tempLabel.innerHTML = `Temperature: ${palette.temperature}`
+  paletteCard.appendChild(tempLabel);
+
+  return paletteCard;
 }

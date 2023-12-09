@@ -18,7 +18,12 @@ const handleSubmit = (event) => {
   const paletteElement = createPalette(newPalette);
   document.querySelector('#palettes-list').appendChild(paletteElement);
   event.target.reset();
-}
+};
 
 const form = document.querySelector('#palette-form');
-form.addEventListener('submit', handleSubmit);
+const main = () => {
+  form.addEventListener('submit', handleSubmit);
+
+};
+
+main();
