@@ -230,19 +230,19 @@ And don't forget that users need some confirmation of a copy, so alter the butto
 In order to see how well you're doing with this project, here are all the things we need would like to see from you. If you get all of these, then you know that you're where you need to be!
 
 ## Layout: Structure
-- [ ] There is a single `main` element on the page
-- [ ] There is a single `h1` element on the page
-- [ ] There is a `form`
-- [ ] The form has an `h2` label
-- [ ] The form has an `text` input and label for the palette title
-- [ ] The form has 3 `color` type inputs and labels for the color inputs
-- [ ] The form has a `fieldset` with a `legend` for the temperature setting
-- [ ] The form has 3 `radio` inputs and `labels` for the temperature setting
-- [ ] The form has `neutral` as the default temperature setting
-- [ ] The form has a `button` to submit the form
-- [ ] There is an `h2` showing the palettes section
-- [ ] There is a `section` for the palettes
-- [ ] The page has a `ul` and `li` items that show each palette
+- [X] There is a single `main` element on the page
+- [X] There is a single `h1` element on the page
+- [X] There is a `form`
+- [X] The form has an `h2` label
+- [X] The form has an `text` input and label for the palette title
+- [X] The form has 3 `color` type inputs and labels for the color inputs
+- [X] The form has a `fieldset` with a `legend` for the temperature setting
+- [X] The form has 3 `radio` inputs and `labels` for the temperature setting
+- [X] The form has `neutral` as the default temperature setting
+- [X] The form has a `button` to submit the form
+- [X] There is an `h2` showing the palettes section
+- [X] There is a `section` for the palettes
+- [X] The page has a `ul` and `li` items that show each palette
 - [ ] Each palette has the 3 colors clearly visible somehow
 - [ ] Each palette has white and black text overlaid on each of the colors
 - [ ] Each palette *somehow* has white and black border on each of the colors
@@ -254,15 +254,15 @@ In order to see how well you're doing with this project, here are all the things
 - [ ] Palettes appear next to each other in a grid-like pattern (flex or grid presentations fine)
 
 ## layout: Accessibility
-- [ ] The form has an `aria-label` or `aria-labelledby` attribute that describes the form
-- [ ] The section has an `aria-label` or `aria-labelledby` attribute that describes the section
-- [ ] There are no instances of recreating any semantic elements
+- [X] The form has an `aria-label` or `aria-labelledby` attribute that describes the form
+- [X] The section has an `aria-label` or `aria-labelledby` attribute that describes the section
+- [X] There are no instances of recreating any semantic elements
 
 ## Functionality
-- [ ] The title is a `required` field, and the form cannot be submitted without it
-- [ ] Clicking the form submit button does not reload the page because the default behavior is prevented
+- [X] The title is a `required` field, and the form cannot be submitted without it
+- [X] Clicking the form submit button does not reload the page because the default behavior is prevented
 - [ ] Clicking the form submit button creates a new palette in the palettes section
-- [ ] Clicking the form submit button clears the form
+- [X] Clicking the form submit button clears the form
 - [ ] Clicking one of the copy buttons copies the hex code of the color to the clipboard
 - [ ] Clicking the copy button copies the selected color to the user's clipboard
 - [ ] Clicking the copy button alters the text for a second to say "Copied hex!" for 1 second before switching back
@@ -273,9 +273,9 @@ In order to see how well you're doing with this project, here are all the things
 - [ ] A user's palettes are saved to localStorage
 
 ## Meta
-- [ ] The project is created using Vite
-- [ ] The code exists in more than one JS file
-- [ ] The project is deployed via GitHub Pages properly
+- [X] The project is created using Vite
+- [X] The code exists in more than one JS file
+- [X] The project is deployed via GitHub Pages properly
 - [ ] The `palettes.json` file is read properly
 - [ ] css flexbox or grid was used
 - [ ] The code does not render unescaped text directly to the DOM (createElement or other escape method used)

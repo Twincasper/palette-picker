@@ -1,6 +1,14 @@
 import './style.css';
 import { v4 as uuidv4 } from 'uuid';
-import { createPalette } from './modules/local-storage-utils.js';
+import { getPalettes, setPalettes, initPalettesIfEmpty, addPalette, removePalette } from './modules/local-storage-utils.js';
+import startingPalettes from '../palettes.json';
+
+const renderPalettes = () => {
+  // const {title, temperature, colors, uuid} = startingPalettes;
+  // const li = document.createElement('li');
+  // li.innerHTML = `${uuid}, ${title}, ${temperature}, ${colors}`;
+  // document.querySelector('#app').append(li);
+}
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -15,13 +23,16 @@ const handleSubmit = (event) => {
     colors: [formObj.color1, formObj.color2, formObj.color3],
     temperature: formObj.temperature
   };
-  const paletteElement = createPalette(newPalette);
-  document.querySelector('#palettes-list').appendChild(paletteElement);
+  
+  addPalette(newPalette);
+  renderPalettes();
+
   event.target.reset();
 };
 
 const form = document.querySelector('#palette-form');
 const main = () => {
+  initPalettesIfEmpty();
   form.addEventListener('submit', handleSubmit);
 
 };
